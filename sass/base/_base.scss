@@ -1,0 +1,21 @@
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.cf::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+body{
+    padding: 40px 10px 0 10px;
+    font-family: $font-english;
+    font-weight: 100;
+    color: $color-main;
+}
+
+#wrap{
+    margin: 0 auto;
+}

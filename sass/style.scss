@@ -1,0 +1,14 @@
+@charset "utf-8";
+//ベースの設定
+@import "base/_setting";
+@import "base/_reset";
+@import "base/_base";
+//レイアウトの設定
+@import "layout/_layout";
+@import "layout/_header";
+@import "layout/_main";
+@import "layout/_nav";
+@import "layout/_footer";
+//モジュールの設定
+@import "module/_button";
+@import "module/_heading";

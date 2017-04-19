@@ -1,0 +1,2 @@
+[2017-04-18 15:12:34] layer "logo.png": Duplicate path: logo.png
+[2017-04-18 15:12:34] layer "top-modoru.png": Duplicate path: top-modoru.png

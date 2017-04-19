@@ -1,0 +1,17 @@
+#gnav-btn {
+	float: right;
+}
+
+#gnav{
+    clear: both;
+    li{
+        text-align: right;
+        border-bottom: 1px solid #aaaaaa;
+    }
+    a{
+        display: block;
+        text-decoration: none;
+        color: $color-main;
+        padding: 20px 0;
+    }
+}
