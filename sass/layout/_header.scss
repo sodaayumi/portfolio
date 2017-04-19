@@ -1,6 +1,16 @@
-#header{
-    #logo{
+#header {
+    position: relative;
+    
+    #gnav{
+        position: absolute;
+        top: 100%;
+        width: 100%;
+    }
+    .gnav-ul {
+        display: none;
+    }
+    #logo {
         float: left;
-        font-size: 30px;
+        font-size: 32px;
     }
 }

@@ -125,19 +125,86 @@ body {
 
 #wrap {
   margin: 0 auto;
+  max-width: 940px;
 }
 
 .h2-title {
   font-size: 26px;
 }
 
+#header {
+  position: relative;
+}
+
+#header #gnav {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+}
+
+#header .gnav-ul {
+  display: none;
+}
+
 #header #logo {
   float: left;
-  font-size: 30px;
+  font-size: 32px;
 }
 
 #main-wrap {
   background-color: #f9f9f9;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.h2-title {
+  font-size: 30px;
+  text-align: center;
+  padding-bottom: 40px;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: normal;
+}
+
+#mv {
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+section {
+  padding-bottom: 100px;
+}
+
+main h3 {
+  text-align: center;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+main p {
+  text-align: center;
+}
+
+main .bold {
+  padding-top: 10px;
+  font-size: 22px;
+}
+
+#top-modoru {
+  display: block;
+  width: 80px;
+  height: 80px;
+  text-indent: -9999px;
+  background-image: url(../img/top-modoru.png);
+  background-repeat: no-repeat;
+  transition: 0.8s;
+  position: relative;
+  top: -40px;
+  margin: 0 auto;
+}
+
+#top-modoru:hover {
+  opacity: 0.9;
+  background-image: url(../img/top-modoru-hover.png);
 }
 
 #gnav-btn {
@@ -151,6 +218,7 @@ body {
 #gnav li {
   text-align: right;
   border-bottom: 1px solid #aaaaaa;
+  background-color: #fff;
 }
 
 #gnav a {
