@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond|Tangerine");
 @import url(//fonts.googleapis.com/earlyaccess/hannari.css);
 @import url(//fonts.googleapis.com/earlyaccess/kokoro.css);
@@ -167,7 +168,41 @@ body {
 
 #mv {
   padding-top: 50px;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
+}
+
+.sample1 {
+  overflow: hidden;
+  position: relative;
+  /* 相対位置指定 */
+}
+
+.sample1 .caption {
+  font-size: 30px;
+  text-align: center;
+  color: #000;
+  position: relative;
+  top: 45%;
+}
+
+.sample1 .mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* 絶対位置指定 */
+  top: 0;
+  left: 0;
+  opacity: 0;
+  /* マスクを表示しない */
+  background-color: #fff;
+  /* マスクは半透明 */
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.sample1:hover .mask {
+  opacity: 0.6;
+  /* マスクを表示する */
 }
 
 section {
