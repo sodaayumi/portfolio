@@ -14,21 +14,33 @@ $("#top-modoru").click(function () {
     return false;
 });
 
-//メインビジュアルのスライドする動き
-var count = $("#slide li").length;
-var current = 1;
-var next = 2;
+//ナビゲーションをクリックしたときに対応した場所へスクロール
+$("#gnav a").click(function () {
+    $(this).attr("href");
+    var target = $($(this).attr("href")).offset().top;
+    target = target - 10;
+    $("html,body").animate({
+        scrollTop: target
+    }, 1000);
+    return false;
+});
 
-timer = setInterval(slideTimer, 3000);
-
-//function slideTimer(){
-//    $("#slide li:nth-child(+" + current + ")").fadeOut(800);
-//    $("#slide li:nth-child(+" + next + ")").fadeIn(800);
-//
-//    current = next;
-//    next = ++next;
-//
-//    if(next > count){
-//        next = 1;
+//ナビゲーションを上に固定
+//var $gnav = $("#gnav").offset().top;
+//    alert($gnav;)
+//$(window).scroll(function () {
+//    var $scroll = $(window).scrollTop();
+//    if ($scroll > $gnav) {
+//        $("#gnav").css({
+//            "position": "fixed",
+//            "top": "0"
+//        });
+//    } else {
+//        $("#gnav").css({
+//            "position": "absolute",
+//            "bottom": "10",
+//            "top": "auto"
+//        });
+//        $("#gnav").css("position", "absolute");
 //    }
-//} 
+//});

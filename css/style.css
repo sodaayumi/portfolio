@@ -129,8 +129,13 @@ body {
   max-width: 940px;
 }
 
-.h2-title {
-  font-size: 26px;
+@media screen and (min-width: 960px) {
+  #header {
+    float: left;
+  }
+  #content {
+    float: right;
+  }
 }
 
 #header {
@@ -152,6 +157,36 @@ body {
   font-size: 32px;
 }
 
+@media screen and (min-width: 600px) {
+  #header {
+    position: none;
+  }
+  #header #gnav {
+    position: none;
+  }
+  #header .gnav-ul {
+    display: block;
+  }
+  #header #logo {
+    float: none;
+    text-align: center;
+    font-size: 40px;
+    padding-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  #header {
+    width: 23%;
+    background-color: #f9f9f9;
+  }
+  #header #logo {
+    font-size: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
 #main-wrap {
   background-color: #f9f9f9;
   padding-top: 50px;
@@ -171,13 +206,12 @@ body {
   padding-bottom: 50px;
 }
 
-.sample1 {
+.portfolio {
   overflow: hidden;
   position: relative;
-  /* 相対位置指定 */
 }
 
-.sample1 .caption {
+.portfolio .caption {
   font-size: 30px;
   text-align: center;
   color: #000;
@@ -185,24 +219,26 @@ body {
   top: 45%;
 }
 
-.sample1 .mask {
+.portfolio .mask {
   width: 100%;
   height: 100%;
   position: absolute;
-  /* 絶対位置指定 */
   top: 0;
   left: 0;
   opacity: 0;
-  /* マスクを表示しない */
+  /* 表示させない */
   background-color: #fff;
-  /* マスクは半透明 */
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
 }
 
-.sample1:hover .mask {
-  opacity: 0.6;
-  /* マスクを表示する */
+.portfolio:hover .mask {
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  opacity: 1;
+  /* ホバーで表示する */
 }
 
 section {
@@ -242,28 +278,85 @@ main .bold {
   background-image: url(../img/top-modoru-hover.png);
 }
 
-#gnav-btn {
+@media screen and (min-width: 960px) {
+  #content {
+    width: 74%;
+  }
+  #mv {
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
+}
+
+#header #gnav-btn {
   float: right;
+  transition: 1.0s;
 }
 
-#gnav {
+#header #gnav-btn:hover {
+  opacity: 0.5;
+}
+
+#header #gnav {
   clear: both;
+  position: relative;
+  z-index: 10;
 }
 
-#gnav li {
+#header #gnav li {
   text-align: right;
   border-bottom: 1px solid #aaaaaa;
   background-color: #fff;
 }
 
-#gnav a {
+#header #gnav li a {
   display: block;
   text-decoration: none;
   color: #333;
   padding: 20px 0;
+  transition: 1.0s;
+}
+
+#header #gnav li a:hover {
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 600px) {
+  #header #gnav-btn {
+    float: none;
+    display: none;
+  }
+  #header #gnav {
+    clear: both;
+    position: static;
+  }
+  #header #gnav ul {
+    display: block !important;
+  }
+  #header #gnav li {
+    width: calc(100% / 5);
+    float: left;
+    text-align: center;
+    border-top: 1px solid #aaaaaa;
+  }
+  #header #gnav li .first {
+    padding: 16px 0;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  #header #gnav ul {
+    padding-bottom: 50px;
+  }
+  #header #gnav li {
+    width: 100%;
+    float: left;
+    border-top: none;
+  }
 }
 
 #footer {
+  clear: both;
   height: 100px;
 }
 
