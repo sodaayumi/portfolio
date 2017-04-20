@@ -26,21 +26,21 @@ $("#gnav a").click(function () {
 });
 
 //ナビゲーションを上に固定
-//var $gnav = $("#gnav").offset().top;
-//    alert($gnav;)
-//$(window).scroll(function () {
-//    var $scroll = $(window).scrollTop();
-//    if ($scroll > $gnav) {
-//        $("#gnav").css({
-//            "position": "fixed",
-//            "top": "0"
-//        });
-//    } else {
-//        $("#gnav").css({
-//            "position": "absolute",
-//            "bottom": "10",
-//            "top": "auto"
-//        });
-//        $("#gnav").css("position", "absolute");
-//    }
-//});
+var $gnav = $("#gnav").offset().top;
+    alert($gnav;)
+$(window).scroll(function () {
+    var $scroll = $(window).scrollTop();
+    if ($scroll > $gnav) {
+        $("#gnav").css({
+            "position": "fixed",
+            "top": "0"
+        });
+    } else {
+        $("#gnav").css({
+            "position": "absolute",
+            "bottom": "0",
+            "top": "auto"
+        });
+        $("#gnav").css("position", "absolute");
+    }
+});

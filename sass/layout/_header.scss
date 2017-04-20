@@ -1,13 +1,4 @@
 #header {
-    position: relative;
-    #gnav {
-        position: absolute;
-        top: 100%;
-        width: 100%;
-    }
-    .gnav-ul {
-        display: none;
-    }
     #logo {
         float: left;
         font-size: 32px;
@@ -16,13 +7,6 @@
 
 @media screen and (min-width:$tab) {
     #header {
-        position: none;
-        #gnav {
-            position: none;
-        }
-        .gnav-ul {
-            display: block;
-        }
         #logo {
             float: none;
             text-align: center;
@@ -34,8 +18,6 @@
 
 @media screen and(min-width:$pc) {
     #header {
-        width: 23%;
-        background-color: #f9f9f9;
         #logo {
             font-size: 30px;
             padding-top: 50px;
