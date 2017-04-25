@@ -6,6 +6,12 @@ $(function(){
     });
 });
 
+//gnav-btnの動き
+    $(".menu").click(function(){
+        $(this).toggleClass("active")
+        return false
+    });
+
 //TOPへ戻るの動き
 $("#top-modoru").click(function () {
     $("html,body").animate({

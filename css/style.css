@@ -143,6 +143,58 @@ body {
   font-size: 32px;
 }
 
+#header .menu,
+#header .menu span {
+  display: inline-block;
+  transition: .4s;
+  box-sizing: border-box;
+}
+
+#header .menu {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  transition: 5s;
+}
+
+#header .menu span {
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+  position: absolute;
+}
+
+#header .menu span:nth-child(1) {
+  top: 0;
+}
+
+#header .menu span:nth-child(2) {
+  top: 10px;
+}
+
+#header .menu span:nth-child(3) {
+  bottom: 0;
+}
+
+#header .menu.active span:nth-child(1) {
+  top: 10px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#header .menu.active span:nth-child(2) {
+  top: 10px;
+  opacity: 0;
+}
+
+#header .menu.active span:nth-child(3) {
+  top: 10px;
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
 @media screen and (min-width: 600px) {
   #header #logo {
     float: none;
@@ -158,6 +210,19 @@ body {
     padding-top: 50px;
     padding-bottom: 50px;
   }
+}
+
+.mail-btn {
+  color: #333;
+  font-size: 24px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  transition: 1s;
+}
+
+.mail-btn:hover {
+  opacity: 0.5;
 }
 
 .main-wrap {
@@ -358,7 +423,7 @@ main .bold {
     border-top: 1px solid #aaaaaa;
   }
   #header #gnav li .first {
-    padding: 16px 0;
+    padding: 16.5px 0;
   }
 }
 
