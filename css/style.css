@@ -129,15 +129,6 @@ body {
   max-width: 940px;
 }
 
-@media screen and (min-width: 960px) {
-  #header {
-    float: left;
-  }
-  #content {
-    float: right;
-  }
-}
-
 #header #logo {
   float: left;
   font-size: 32px;
@@ -204,12 +195,123 @@ body {
   }
 }
 
-@media screen and (min-width: 960px) {
-  #header #logo {
-    font-size: 30px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
+html,
+body {
+  height: 100%;
+}
+
+section {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  transition: .5s;
+}
+
+section:hover {
+  background-color: #fff;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+section:hover .html5 {
+  background-image: url(../img/html5.png);
+}
+
+section:hover .css3 {
+  background-image: url(../img/css3.png);
+}
+
+section:hover .js {
+  background-image: url(../img/js.png);
+}
+
+section:hover .about-p {
+  background-image: url(../img/about-p.png);
+}
+
+section:hover .photo-p {
+  background-image: url(../img/photo-p.png);
+}
+
+.about-p {
+  margin: 0 auto;
+  text-indent: -9999px;
+  background-image: url(../img/about-pp.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  transition: .4s;
+  max-width: 96%;
+  height: 200px;
+}
+
+.photo-p {
+  margin: 0 auto;
+  text-indent: -9999px;
+  background-image: url(../img/photo-pp.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  transition: .4s;
+  max-width: 96%;
+  height: 200px;
+}
+
+.html5 {
+  display: inline-block;
+  width: 40px;
+  height: 56px;
+  text-indent: -9999px;
+  background-image: url(../img/html5-hover.png);
+  background-repeat: no-repeat;
+  transition: .4s;
+}
+
+.css3 {
+  display: inline-block;
+  width: 40px;
+  height: 56px;
+  text-indent: -9999px;
+  background-image: url(../img/css3-hover.png);
+  background-repeat: no-repeat;
+  transition: 0.4s;
+}
+
+.js {
+  display: inline-block;
+  width: 40px;
+  height: 56px;
+  text-indent: -9999px;
+  background-image: url(../img/js-hover.png);
+  background-repeat: no-repeat;
+  transition: 0.4s;
+}
+
+#logo a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  transition: .3s;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+#logo a:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.04);
+  transform: scale(1.04);
+}
+
+#work p {
+  padding-top: 20px;
+}
+
+.skill-photo {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .mail-btn {
@@ -219,6 +321,7 @@ body {
   display: block;
   text-align: center;
   transition: 1s;
+  margin-bottom: 40px;
 }
 
 .mail-btn:hover {
@@ -227,8 +330,8 @@ body {
 
 .main-wrap {
   background-color: #f1f1f1;
-  padding-top: 50px;
-  padding-bottom: 0px;
+  padding-top: 30px;
+  padding-bottom: 50px;
 }
 
 .h2-title {
@@ -246,6 +349,7 @@ body {
 }
 
 h3 {
+  margin-top: 30px;
   margin-bottom: 10px;
 }
 
@@ -263,12 +367,8 @@ h3 {
   position: relative;
 }
 
-.portfolio .caption {
-  font-size: 30px;
-  text-align: center;
-  color: #000;
+.portfolio .caption1 {
   position: relative;
-  top: 45%;
 }
 
 .portfolio .mask {
@@ -291,10 +391,6 @@ h3 {
   transform: rotateY(0deg);
   opacity: 1;
   /* ホバーで表示する */
-}
-
-section {
-  padding-bottom: 150px;
 }
 
 main h3 {
@@ -334,27 +430,6 @@ main .bold {
   #top-modoru {
     clear: both;
   }
-  #about {
-    width: 50%;
-    float: left;
-  }
-  #skill {
-    width: 50%;
-    float: right;
-  }
-  #work {
-    clear: both;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  #content {
-    width: 74%;
-  }
-  #mv {
-    padding-top: 0;
-    padding-bottom: 50px;
-  }
 }
 
 #header {
@@ -363,11 +438,11 @@ main .bold {
 
 #header #gnav-btn {
   float: right;
-  transition: 1.0s;
+  transition: 0.5s;
 }
 
 #header #gnav-btn:hover {
-  opacity: 0.5;
+  opacity: .5;
 }
 
 #header #gnav {
@@ -394,11 +469,11 @@ main .bold {
   text-decoration: none;
   color: #333;
   padding: 20px 0;
-  transition: 1.0s;
+  transition: .5s;
 }
 
 #header #gnav li a:hover {
-  opacity: 0.5;
+  opacity: .5;
 }
 
 @media screen and (min-width: 600px) {
@@ -424,21 +499,6 @@ main .bold {
   }
   #header #gnav li .first {
     padding: 16.5px 0;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  #header {
-    width: 23%;
-    background-color: #f1f1f1;
-  }
-  #header #gnav ul {
-    padding-bottom: 50px;
-  }
-  #header #gnav li {
-    width: 100%;
-    float: left;
-    border-top: none;
   }
 }
 

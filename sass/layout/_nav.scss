@@ -2,9 +2,9 @@
     position: relative;
     #gnav-btn {
         float: right;
-        transition: 1.0s;
+        transition: 0.5s;
         &:hover {
-            opacity: 0.5;
+           opacity: .5;
         }
     }
     #gnav {
@@ -26,9 +26,9 @@
                 text-decoration: none;
                 color: $color-main;
                 padding: 20px 0;
-                transition: 1.0s;
+                transition: .5s;
                 &:hover {
-                    opacity: 0.5;
+                    opacity: .5;
                 }
             }
         }
@@ -61,19 +61,19 @@
     }
 }
 
-@media screen and(min-width:$pc) {
-    #header {
-        width: 23%;
-        background-color: #f1f1f1;
-        #gnav {
-            ul {
-                padding-bottom: 50px;
-            }
-            li {
-                width: 100%;
-                float: left;
-                border-top: none;
-            }
-        }
-    }
-}
+//@media screen and(min-width:$pc) {
+//    #header {
+//        width: 23%;
+//        background-color: #f1f1f1;
+//        #gnav {
+//            ul {
+//                padding-bottom: 50px;
+//            }
+//            li {
+//                width: 100%;
+//                float: left;
+//                border-top: none;
+//            }
+//        }
+//    }
+//}
